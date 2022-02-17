@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrabble Word Checker</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='js/main.js') }}">
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<h1 class="h1">Scrabble Word Checker</h1>
+	<h2>Enter a word to check whether it is a valid Scrabble Word</h2>
+	{% block body %}{% endblock %}
+</body>
+</html>

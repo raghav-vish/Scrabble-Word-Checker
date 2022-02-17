@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container2">
+		<form action="/" method="POST">
+			<div class="search-box">
+				<input type="text" class="search-box-input" name ="word" placeholder={{word}}>
+				<input type="submit" value="">
+					<button class="search-box-btn">
+						<img src="{{url_for('static', filename='download.png')}}">
+					</button>
+				</input>
+			</div>
+		</form>
+	</div>
+
+{% if resno == 1 %}
+<div class="result">
+	{{res2}}
+</div>
+
+<div class="defi">
+	{% for def in defi %}
+		<p>{{def}}</p>
+	{% endfor %}
+</div>
+{% endif %}
+
+{% if resno == 0 %}
+<div class="result2">
+	{{res2}}
+</div>
+{% endif %}
+
+
+{% endblock %}
